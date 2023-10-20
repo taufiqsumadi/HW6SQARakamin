@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>TestAutomation</td>
+                          <td>1</td>
+                        <td>21 Oct 2023, 01:06</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">StepDef.productDetail.usersCanSeeTheAvailableProducts()</td>
+                <td>1</td>
+                <td class="duration" data-value="4608131000">4s 608ms</td>
+                <td class="duration" data-value="4608131000">4s 608ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.productDetail.usersClicksOnProductTitle()</td>
+                <td>1</td>
+                <td class="duration" data-value="1049341000">1s 049ms</td>
+                <td class="duration" data-value="1049341000">1s 049ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.productDetail.usersGetInformationDetailAboutProduct()</td>
+                <td>1</td>
+                <td class="duration" data-value="186090000">186ms</td>
+                <td class="duration" data-value="186090000">186ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.productQuantityLimitation.theUserAddsProductsToTheCartByClickingTheButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="49512000">049ms</td>
+                <td class="duration" data-value="49512000">049ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.productQuantityLimitation.theUserCanSeeTheAvailableProducts()</td>
+                <td>1</td>
+                <td class="duration" data-value="3530229000">3s 530ms</td>
+                <td class="duration" data-value="3530229000">3s 530ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.productQuantityLimitation.theUserClicksOnTheCartIconInTheTopRightSide()</td>
+                <td>1</td>
+                <td class="duration" data-value="32562000">032ms</td>
+                <td class="duration" data-value="32562000">032ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.productQuantityLimitation.theUsersCannotFillProductQuantities()</td>
+                <td>1</td>
+                <td class="duration" data-value="173482000">173ms</td>
+                <td class="duration" data-value="173482000">173ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.shoppingCartCheckout.theUserAddsProductsToTheCartByClickingTheButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="49189000">049ms</td>
+                <td class="duration" data-value="49189000">049ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.shoppingCartCheckout.theUserCanSeeTheAvailableProducts()</td>
+                <td>1</td>
+                <td class="duration" data-value="4608506000">4s 608ms</td>
+                <td class="duration" data-value="4608506000">4s 608ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.shoppingCartCheckout.theUserClicksOnTheCartIconInTheTopRightSide()</td>
+                <td>1</td>
+                <td class="duration" data-value="31676000">031ms</td>
+                <td class="duration" data-value="31676000">031ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.shoppingCartCheckout.theUserClicksTheButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="27232000">027ms</td>
+                <td class="duration" data-value="27232000">027ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.shoppingCartCheckout.theUserShouldBeDirectedToTheCheckoutPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="112708000">112ms</td>
+                <td class="duration" data-value="112708000">112ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.userLogin.ClicksTheLoginButton()</td>
+                <td>2</td>
+                <td class="duration" data-value="2093794000">2s 093ms</td>
+                <td class="duration" data-value="1046897000">1s 046ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.userLogin.EntersAValidPassword()</td>
+                <td>1</td>
+                <td class="duration" data-value="32321000">032ms</td>
+                <td class="duration" data-value="32321000">032ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.userLogin.EntersAValidUsername()</td>
+                <td>1</td>
+                <td class="duration" data-value="104939000">104ms</td>
+                <td class="duration" data-value="104939000">104ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.userLogin.OpensTheApplicationThroughABrowser()</td>
+                <td>2</td>
+                <td class="duration" data-value="4923249000">4s 923ms</td>
+                <td class="duration" data-value="2461624500">2s 461ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.userLogin.ShouldBeSuccessfullyLoggedInToTheApplication()</td>
+                <td>1</td>
+                <td class="duration" data-value="202704000">202ms</td>
+                <td class="duration" data-value="202704000">202ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.userLogin.entersAInvalidPassword()</td>
+                <td>1</td>
+                <td class="duration" data-value="30102000">030ms</td>
+                <td class="duration" data-value="30102000">030ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.userLogin.entersAInvalidUsername()</td>
+                <td>1</td>
+                <td class="duration" data-value="91322000">091ms</td>
+                <td class="duration" data-value="91322000">091ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.userLogin.theUserReceivesANotificationThatTheUsernameOrPasswordIsIncorrect()</td>
+                <td>1</td>
+                <td class="duration" data-value="183145000">183ms</td>
+                <td class="duration" data-value="183145000">183ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.userLogout.userClicksTheBurgerIcon()</td>
+                <td>1</td>
+                <td class="duration" data-value="52234000">052ms</td>
+                <td class="duration" data-value="52234000">052ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.userLogout.userClicksTheLoginButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="1047317000">1s 047ms</td>
+                <td class="duration" data-value="1047317000">1s 047ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.userLogout.userClicksTheLogoutButton()</td>
+                <td>1</td>
+                <td class="duration" data-value="91621000">091ms</td>
+                <td class="duration" data-value="91621000">091ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.userLogout.userEntersAValidPassword()</td>
+                <td>1</td>
+                <td class="duration" data-value="38502000">038ms</td>
+                <td class="duration" data-value="38502000">038ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.userLogout.userEntersAValidUsername()</td>
+                <td>1</td>
+                <td class="duration" data-value="120489000">120ms</td>
+                <td class="duration" data-value="120489000">120ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.userLogout.userOpensTheApplicationThroughABrowser()</td>
+                <td>1</td>
+                <td class="duration" data-value="3467525000">3s 467ms</td>
+                <td class="duration" data-value="3467525000">3s 467ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDef.userLogout.userWillBeRedirectToLoginPage()</td>
+                <td>1</td>
+                <td class="duration" data-value="163223000">163ms</td>
+                <td class="duration" data-value="163223000">163ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>27</td>
+              <td>29</td>
+              <td class="duration">27s 101ms</td>
+              <td class="duration">934ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
